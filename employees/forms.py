@@ -18,3 +18,4 @@ class EmployeeForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
          super(EmployeeForm,self).__init__(*args, **kwargs)
          self.fields['bloodGroup'].empty_label = "Select your Blood Group"
+

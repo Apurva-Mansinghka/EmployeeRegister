@@ -1,7 +1,8 @@
 {% extends "employees/base.html" %}
-{% load crispy_forms_tags %}
 
+{% load crispy_forms_tags %}
 {% block content %}
+<!-- Form to take input from user to add details of employees or to edit details of existing employee -->
 <form action="" method="post" autocomplete="off">
     {% csrf_token %}
     {{form.fullName|as_crispy_field}}
@@ -22,19 +23,19 @@
         </div>
     </div>
     {{form.address|as_crispy_field}}
-
-    <div class="row">
+    <!-- Button to submit form values -->
+    <div class="row"> -->
         <div class="col-md-6">
             <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fas fa-database"></i>
                 Submit</button>
         </div>
+    <!-- Button to go to list view of all empoyees -->
         <div class="col-md-6">
             <a href="{% url 'employee_list' %}" class="btn btn-secondary btn-block btn-lg">
                 <i class="fas fa-stream"></i> Back to list
             </a>
         </div>
     </div>
-   <!-- <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fas fa-database"></i>Submit</button> -->
 </form>
 {% endblock content %}
     

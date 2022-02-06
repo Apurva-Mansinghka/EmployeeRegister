@@ -1,6 +1,5 @@
 from django.db import models
-
-# Create your models here.
+#Class for blood group table which will have fixed data of different typpes of blood group and will be foreign key in main table
 class BloodGroup(models.Model):
     bloodGrp = models.CharField(max_length=5)
 
@@ -13,7 +12,7 @@ class Employee(models.Model):
     emailID = models.EmailField()   
     dateOfBirth = models.DateField()
     address = models.CharField(max_length=200)
-    bloodGroup = models.ForeignKey(BloodGroup, on_delete=models.CASCADE)
+    bloodGroup = models.ForeignKey(BloodGroup, on_delete=models.CASCADE) #Foreign key from BloodGroup Table
 
     def __str__(self):
         return(self.fullName)
