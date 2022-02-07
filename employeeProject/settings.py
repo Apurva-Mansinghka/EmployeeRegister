@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '=e$%1y6f3n(co(9zr&bjv&s)c^fsvgtzz1jurak4_oul4@1*(f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['employee-register-apurva.herokuapp.com', 'localhost' ]
 
 
 # Application definition
